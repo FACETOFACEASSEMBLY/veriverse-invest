@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"> <!-- Added data-theme attribute to match HTML2 -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verification | Veriverse</title>
+  <link rel="icon" href="../assets/logo.jpg" type="image/jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Moved all navigation-related styles from HTML2 here to maintain consistency */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text);
+        font-size: 20px;
+        cursor: pointer;
+        margin-left:auto;
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: var(--card-bg);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        padding: var(--space-sm) 0;
+        min-width: 200px;
+        display: none;
+        z-index: 100;
+        border: 1px solid var(--border);
+    }
+    
+    .dropdown-menu a {
+        display: block;
+        padding: var(--space-sm) var(--space-md);
+        color: var(--text);
+        text-decoration: none;
+        transition: var(--transition);
+    }
+    
+    .dropdown-menu a:hover {
+        background-color: rgba(var(--primary), 0.1);
+        color: var(--primary);
+    }
+    
+    .user-avatar {
+        cursor: pointer;
+        position: relative;
+    }
+    
+    /* Added media queries from HTML2 for responsive behavior */
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block;
+        }
+        
+        nav ul {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            width: 100%;
+            background-color: var(--card-bg);
+            flex-direction: column;
+            padding: var(--space-md);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 90;
+        }
+        
+        nav ul.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .dropdown-menu {
+            left: 0;
+            right: auto;
+        }
+    }
+
+    /* Verification page specific styles */
+    .verification-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--space-xl) 0;
+    }
+    
+    .verification-card {
+        background-color: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: var(--space-xl);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+    }
+    
+    .verification-header {
+        text-align: center;
+        margin-bottom: var(--space-xl);
+    }
+    
+    .verification-steps {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-xl);
+    }
+    
+    .verification-step {
+        display: flex;
+        gap: var(--space-md);
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        background-color: var(--bg);
+        border: 1px solid var(--border);
+    }
+    
+    .current-step {
+        border-color: var(--primary);
+        background-color: rgba(var(--primary), 0.05);
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--primary);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+    
+    .step-content {
+        flex: 1;
+    }
+    
+    .step-complete {
+        color: var(--success);
+        font-weight: 500;
+        margin-top: var(--space-sm);
+    }
+    
+    .biometric-scan {
+        text-align: center;
+        margin-top: var(--space-md);
+    }
+    
+    .scan-animation {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed var(--primary);
+        border-radius: var(--radius-md);
+        margin: 0 auto var(--space-md);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .scan-line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary);
+        animation: scan 3s linear infinite;
+    }
+    
+    @keyframes scan {
+        0% { top: 0; }
+        100% { top: 100%; }
+    }
+    
+    .scan-button {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        font-weight: 500;
+        transition: var(--transition);
+        margin-top: var(--space-md);
+    }
+    
+    .scan-button:hover {
+        background-color: var(--primary-dark);
+    }
+    
+    .verification-benefits {
+        background-color: rgba(var(--primary), 0.05);
+        border-radius: var(--radius-md);
+        padding: var(--space-lg);
+        margin-bottom: var(--space-xl);
+        border: 1px solid rgba(var(--primary), 0.2);
+    }
+    
+    .verification-benefits h3 {
+        color: var(--primary);
+        margin-bottom: var(--space-md);
+    }
+    
+    .verification-benefits li {
+        margin-bottom: var(--space-sm);
+    }
+    
+    .verification-button {
+        width: 100%;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .verification-button:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header - Updated to match HTML2 exactly -->
+  <header>
+    <div class="header-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/logo.jpg" alt="Veriverse Logo" class="profile-image">
+            <span>Veriverse</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="feed.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="notification.html"><i class="fas fa-bell"></i> <span>Notification</span></a></li>
+                <li><a href="network.html"><i class="fas fa-users"></i> <span>Network</span></a></li>
+                 <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                <li><a href="verification.html" class="active"><i class="fas fa-shield-alt"></i> <span>Verification</span></a></li>
+
+                    <button class="theme-toggle btn-icon" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                <li>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="profile-image" id="userAvatar">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+
+                        <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+
+  <!-- Main App Content -->
+  <div class="app-container">
+    <!-- Left Sidebar - Updated to match HTML2 exactly -->
+    <aside class="sidebar" id="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="feed.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+            <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+            <li><a href="notification.html/"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+            <li><a href="jobs.html"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+
+        </ul>
+
+        <div class="shortcuts">
+            <h3>Your Shortcuts</h3>
+            <div class="shortcut-item">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="shortcut-avatar">
+                <span class="shortcut-name">Tech Innovators</span>
+            </div>
+            <div class="shortcut-item">
+                <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User" class="shortcut-avatar">
+                <span class="shortcut-name">Blockchain Devs</span>
+            </div>
+            <div class="shortcut-item">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="shortcut-avatar">
+                <span class="shortcut-name">Startup Founders</span>
+            </div>
+            <div class="shortcut-item">
+                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="User" class="shortcut-avatar">
+                <span class="shortcut-name">Digital Nomads</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content - Verification page content remains the same -->
+    <main class="main-content">
+      <div class="verification-container">
+        <div class="verification-card">
+          <div class="verification-header">
+            <h2>Verify Your Identity</h2>
+            <p>Complete your verification to unlock all features of Veriverse</p>
+          </div>
+
+          <div class="verification-steps">
+            <div class="verification-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Basic Information</h4>
+                <p>Provide your full name, date of birth, and contact information</p>
+                <div class="step-complete">
+                  <i class="fas fa-check-circle"></i> Completed
+                </div>
+              </div>
+            </div>
+
+            <div class="verification-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Document Upload</h4>
+                <p>Upload a government-issued ID for verification</p>
+                <div class="step-complete">
+                  <i class="fas fa-check-circle"></i> Completed
+                </div>
+              </div>
+            </div>
+
+            <div class="verification-step current-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Biometric Check</h4>
+                <p>Complete a quick facial recognition scan</p>
+                <div class="biometric-scan">
+                  <div class="scan-animation">
+                    <div class="scan-line"></div>
+                  </div>
+                  <p class="scan-text">Align your face within the frame</p>
+                  <button class="scan-button">Start Scan</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="verification-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Educational/Professional Proof</h4>
+                <p>Upload documents to verify your credentials</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="verification-benefits">
+            <h3><i class="fas fa-star"></i> Benefits of Verification</h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Higher trust score and visibility</li>
+              <li><i class="fas fa-check"></i> Ability to send and receive payments</li>
+              <li><i class="fas fa-check"></i> Access to premium job opportunities</li>
+              <li><i class="fas fa-check"></i> Verified badge on your profile</li>
+              <li><i class="fas fa-check"></i> Increased credibility in the network</li>
+            </ul>
+          </div>
+
+          <button class="verification-button">Continue to Next Step</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Added the same JavaScript from HTML2 for consistent functionality -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        mainNav.querySelector('ul').classList.toggle('active');
+    });
+    
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        
+        // Update icon
+        const icon = themeToggle.querySelector('i');
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
+        
+        // Save preference to localStorage
+        localStorage.setItem('theme', newTheme);
+    });
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+            const icon = themeToggle.querySelector('i');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    }
+    
+    // User dropdown
+    const userAvatar = document.getElementById('userAvatar');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    
+    userAvatar.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    // Close dropdown when clicking elsewhere
+    document.addEventListener('click', () => {
+        dropdownMenu.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

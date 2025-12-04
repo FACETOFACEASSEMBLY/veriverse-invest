@@ -1,0 +1,242 @@
+<!Doctype html>
+<head>
+  		<meta name="viewport" content="width-device-width, initial-scale=1.0" />
+  				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" />
+  <Title>Join veriverse today</Title>
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+  :root{
+    --background: #050a06;
+    --gridlines: #424242ee;
+    --theme: #1FAC3B;
+    --abstract: #db7f26;
+    --complement: #1faceb;
+    --box: #132016;
+    --text: #fff;
+    --border: #212121;
+    --fab: #f4cc32;
+    --fabtext: #212121;
+    --inputbox: #efefef;
+    --introtext: #44ff44;
+    --line-gradient: linear-gradient(90deg, var(--theme), var(--abstract));
+    --button: #1fac3b55;
+    --shadow: #eeeeee;
+  }
+  [data-theme="light"] {
+    --background: #050a06;
+  }
+  [data-theme="dark"] {
+    --background: #fff;
+  }
+    body{
+      background: var(--background);
+      background-image: linear-gradient( var(--gridlines) 1px, transparent 0),
+      linear-gradient(90deg, var(--gridlines) 1px, transparent 0);
+      background-size: 60px 60px;
+      margin: 120px 10px 5px 5px;
+      padding: 15px;
+      color: var(--text);
+      font-family: font-family: Tahoma, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      transition: background 0.4s, color 0.4s;
+      
+    }
+    .fab{
+      position: fixed;
+      background-color: var(--theme);
+      border-radius: 50%;
+      width:60px; 
+      height:60px;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      animation: spin 8s ease;
+    }
+    .fab i{
+      color: var(--fabtext);
+      font-size: 25px;
+    }
+    section{
+      margin: 30px;
+      padding: 18px;
+      border: 2px solid var(--border);
+      background: var(--box);
+      border-radius: 20px;
+      backdrop-filter: blur(1px);
+      width: 100%;
+      transition: transform 0.8s ease;
+      animation: fadeIn 3s ease;
+    }
+    section:hover {
+     transform: translateY(-5px)
+    }
+    h1,h2,p,t1{
+      padding: 0;
+      margin: 0;
+    }
+    .desc1{
+      font-size: 10px;
+    }
+    form{
+      padding-top: 35px;
+    }
+    .introtext{
+      color: var(--introtext);
+    }
+   .introtext::before {
+      content: '';
+      position: absolute;
+      transform: translateY(50px);
+      width: 120px;
+      height: 5px;
+      background-image: var(--line-gradient);
+      border-radius: 30px;
+    }
+    .heading{
+      padding: 8px 0 0 0px;
+      margin: 20px 0px 0px 0px;
+      font-size: 14px;
+    }
+    input, #select{
+      padding: 12px;
+      margin: 0;
+      margin-top: 4px;
+      border-radius: 10px;
+      background-color: var(--inputbox);
+      border: none;
+      width: 95%;
+      font-size: 15px;
+    }
+    #select{
+      width: 100%;
+    }
+    #submit-button{
+      width: 90%;
+      padding: 10px;
+      margin: 60px 4px 0px;
+      display: flex;
+      justify-content: center;
+      justify-self: center;
+      border-radius: 10px;
+      font-size: 20px;
+      border: none;
+      background: var(--button);
+      border-right: 3px solid var(--theme);
+      border-top: 3px solid var(--theme);
+      border-bottom: 3px solid var(--complement);
+      border-left: 3px solid var(--complement);
+      color: var(--text);
+    }
+    #Email:hover {
+      transform: scale(20px);
+    }
+    .heading i {
+      margin-right: 12px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}{transform: translateY(-30px);}
+      to {opacity: 1;}{ transform: translateY(30px);}
+    }
+    
+    @keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <h2 class="introtext">Welcome to Veriverse</h2>
+    <p class="desc1">Identity, Trust and oppurtunity</p>
+    <form>
+      
+      <h3 class="heading"><i class="fas fa-user-o"></i>Username</h3>
+      <input id="Username" placeholder="What is your name" name="name" type="text" maxlength="40"/>
+      
+            <h3 class="heading"><i class="fas fa-envelope"></i>Email</h3>
+      <input id="Email" placeholder="Write your Email" name="Email" type="email" maxlength="100"/>
+
+      
+   <h3 class="heading"><i class="fas fa-layer-group"></i>Select account type</h3>
+      <select id="select" type="list" onchange="accountselect()">
+        <option value="Student">Student</option>
+        <option value="Business">Business</option>
+        <option value="Company">Company</option>
+        <option value="Institution">Institution</option>
+      </select>
+      
+   <h3 class="heading"><i class="fas fa-key"></i>Password</h3>
+      <input id="Password" placeholder="Password" name="name" type="password" maxlength="16"/>
+      
+       <h3 class="heading"><i class="fas fa-key"></i>Confirm Password</h3>
+      <input id="Password" placeholder="Password" name="name" type="password" maxlength="16"/>
+    </form>
+    <button id="submit-button" onclick="submit()">Sign up</button>
+    
+    
+  </section>
+  <div class="fab" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+    <i class="fas fa-moon"></i>
+  </div>
+  
+  
+  
+  <script>
+    const themeToggle = document.querySelector('.fab');
+    const prefersDarkScheme.windows.matchMedia('(prefers-color-scheme: dark)');
+    
+    const currentTheme = localStorage.getItem('theme') || (PreferDarkTheme.matches ? 'dark': 'light');
+    
+    const document.documentElement.setAttribute('datatheme',currentTheme);
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+    
+    
+  
+      // change theme mode
+        function toggleTheme() {
+      const html = document.documentElement;
+      const newTheme = html.dataset.theme === "light" ? "dark" : "light";
+      html.dataset.theme = newTheme;
+      
+      // Update icon
+      const icon = document.querySelector('.toggle-btn i');
+      icon.className = newTheme === "light" ? "fas fa-moon" : "fas fa-sun";
+      
+      // Save preference
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.dataset.theme = savedTheme;
+      const icon = document.querySelector('.toggle-btn i');
+      icon.className = savedTheme === "light" ? "fas fa-moon" : "fas fa-sun";
+    }
+    //submit setup
+    const submit = document.querySelector('submit-button');
+    function submit(){
+      alert("Welcome to Veriverse")
+    }
+    
+    </script>
+</body>
+</html>

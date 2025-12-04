@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | Veriverse</title>
+    <link rel="icon" href="../assets/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+   
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="../indexhtml/" class="logo">
+                <img src="../assets/logo.jpg" alt="Veriverse Logo" class="profile-image">
+                <span>Veriverse</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="feed.html/" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="notification.html"><i class="fas fa-bell"></i> <span>Notification</span></a></li>
+                    <li><a href="network.html"><i class="fas fa-users"></i> <span>Network</span></a></li>
+                                    <li><a href="message.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+<li><a href="jobs.html"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                    
+                    <li><a href="verification.html"><i class="fas fa-shield-alt"></i> <span>Verification</span></a></li>
+
+                  
+                        <button class="theme-toggle btn-icon" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="profile-image" id="userAvatar">
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+
+                            <a href="index.html/"><i class="fas fa-question-circle"></i> Help</a>
+                            <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main App Content -->
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="feed.html" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+                <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                <li><a href="notification.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                <li><a href="events.html"><i class="fas fa-calendar"></i> <span>Events</span></a></li>
+                <li><a href="groups.html"><i class="fas fa-users"></i> <span>Groups</span></a></li>
+                <li><a href="courses.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+            </ul>
+
+            <div class="shortcuts">
+                <h3>Your Shortcuts</h3>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Tech Innovators</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Blockchain Devs</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Startup Founders</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Digital Nomads</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Create Post -->
+            <div class="card create-post">
+                <div class="post-input">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="profile-image">
+                    <textarea placeholder="What's on your mind?"></textarea>
+                </div>
+                <div class="post-actions">
+                    <div class="post-action">
+                        <i class="fas fa-image"></i>
+                        <span>Photo</span>
+                    </div>
+                    <div class="post-action">
+                        <i class="fas fa-video"></i>
+                        <span>Video</span>
+                    </div>
+                    <div class="post-action">
+                        <i class="fas fa-calendar"></i>
+                        <span>Event</span>
+                    </div>
+                    <button class="btn btn-primary post-button">Post</button>
+                </div>
+            </div>
+
+            <!-- Feed -->
+            <div class="feed">
+                <!-- Post 1 -->
+                <div class="card post fade-in">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="profile-image">
+                            <div class="user-info">
+                                <h4>Michael Chen</h4>
+                                <p class="text-muted">Verified • Blockchain Developer • 2h ago</p>
+                            </div>
+                        </div>
+                        <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Just completed our smart contract audit with Veriverse's verification system. The process was seamless and added instant credibility to our project. Highly recommend for any Web3 developers looking to establish trust with their community!</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Post" class="post-image">
+                    <div class="post-stats">
+                        <div class="text-muted">124 Likes • 23 Comments • 5 Shares</div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action-btn">
+                            <i class="far fa-thumbs-up"></i>
+                            <span>Like</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="far fa-comment"></i>
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="fas fa-gem"></i>
+                            <span>Tip</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="card post fade-in" style="animation-delay: 0.1s;">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User" class="profile-image">
+                            <div class="user-info">
+                                <h4>Sarah Johnson</h4>
+                                <p class="text-muted">Verified • University Administrator • 5h ago</p>
+                            </div>
+                        </div>
+                        <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Excited to announce that our university is now partnering with Veriverse to issue verified digital credentials to all graduates! This will revolutionize how our students showcase their achievements to employers.</p>
+                    </div>
+                    <div class="post-stats">
+                        <div class="text-muted">89 Likes • 14 Comments • 8 Shares</div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action-btn">
+                            <i class="far fa-thumbs-up"></i>
+                            <span>Like</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="far fa-comment"></i>
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="fas fa-gem"></i>
+                            <span>Tip</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="card post fade-in" style="animation-delay: 0.2s;">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="profile-image">
+                            <div class="user-info">
+                                <h4>David Kim</h4>
+                                <p class="text-muted">Verified • HR Director • Yesterday</p>
+                            </div>
+                        </div>
+                        <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>We've started using Veriverse's trust scores in our hiring process, and the results have been phenomenal. Verified candidates with high trust scores consistently perform better in our evaluations. The future of hiring is here!</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Post" class="post-image">
+                    <div class="post-stats">
+                        <div class="text-muted">156 Likes • 32 Comments • 12 Shares</div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action-btn">
+                            <i class="far fa-thumbs-up"></i>
+                            <span>Like</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="far fa-comment"></i>
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </div>
+                        <div class="post-action-btn">
+                            <i class="fas fa-gem"></i>
+                            <span>Tip</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="card profile-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile" class="profile-image-xl">
+                <h3>Alexandra Parker</h3>
+                <p class="text-muted">Verified Digital Identity Expert</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">4.9</div>
+                        <div class="stat-label">Trust Score</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1.2K</div>
+                        <div class="stat-label">Connections</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary profile-button">View Profile</button>
+                <button class="btn btn-secondary profile-button">Edit Profile</button>
+            </div>
+
+            <div class="card trending-card">
+                <h3><i class="fas fa-fire"></i> Trending in Tech</h3>
+                <div class="trending-item">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Trend">
+                    <div class="trending-info">
+                        <h4>Digital Identity Revolution</h4>
+                        <p class="text-muted">5.2K discussions</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Trend">
+                    <div class="trending-info">
+                        <h4>Web3 Hiring Trends</h4>
+                        <p class="text-muted">3.8K discussions</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Trend">
+                    <div class="trending-info">
+                        <h4>Blockchain in Education</h4>
+                        <p class="text-muted">2.9K discussions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card trending-card">
+                <h3><i class="fas fa-user-plus"></i> People You May Know</h3>
+                <div class="trending-item">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="User" class="profile-image">
+                    <div class="trending-info">
+                        <h4>Emma Wilson</h4>
+                        <p class="text-muted">University Professor</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" class="profile-image">
+                    <div class="trending-info">
+                        <h4>James Rodriguez</h4>
+                        <p class="text-muted">Startup Founder</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="User" class="profile-image">
+                    <div class="trending-info">
+                        <h4>Sophia Lee</h4>
+                        <p class="text-muted">HR Consultant</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <button class="mobile-trending-btn" id="mobileTrendingBtn">
+  <i class="fas fa-fire"></i>
+</button>
+
+        
+    <script>
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.querySelector('ul').classList.toggle('active');
+        });
+        
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Update icon
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'dark') {
+                const icon = themeToggle.querySelector('i');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+        
+        // User dropdown
+        const userAvatar = document.getElementById('userAvatar');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        userAvatar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Close dropdown when clicking elsewhere
+        document.addEventListener('click', () => {
+            dropdownMenu.style.display = 'none';
+        });
+        // Trending sidebar toggle for mobile
+const mobileTrendingBtn = document.getElementById('mobileTrendingBtn');
+const rightSidebar = document.querySelector('.right-sidebar');
+
+mobileTrendingBtn.addEventListener('click', () => {
+  rightSidebar.classList.toggle('active');
+  
+  // Close if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!rightSidebar.contains(e.target) && e.target !== mobileTrendingBtn) {
+      rightSidebar.classList.remove('active');
+    }
+  }, { once: true });
+});
+
+// Close trending sidebar when clicking on a link inside it
+rightSidebar.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    rightSidebar.classList.remove('active');
+  }
+});
+    
+    </script>
+</body>
+</html>

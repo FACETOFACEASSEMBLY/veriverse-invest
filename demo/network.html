@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network | Veriverse</title>
+    <link rel="icon" href="../assets/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+    <!-- Header -->
+       <header>
+        <div class="header-container">
+            <a href="../index.html/" class="logo">
+                <img src="../assets/logo.jpg" alt="Veriverse Logo" class="profile-image">
+                <span>Veriverse</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="feed.html/" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="notification.html/"><i class="fas fa-bell"></i> <span>Notification</span></a></li>
+                    <li><a href="network.html/"><i class="fas fa-users"></i> <span>Network</span></a></li>
+                                    <li><a href="message.html/"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+<li><a href="jobs.html/"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                    
+                    <li><a href="verification.html/"><i class="fas fa-shield-alt"></i> <span>Verification</span></a></li>
+                    
+                  
+                        <button class="theme-toggle btn-icon" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="profile-image" id="userAvatar">
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="profile.html/"><i class="fas fa-user"></i> My Profile</a>
+
+                            <a href="index.html/"><i class="fas fa-question-circle"></i> Help</a>
+                            <a href="../index.html/"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main App Content -->
+    <div class="container app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="feed.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+                <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                <li><a href="notification.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                <li><a href="events.html"><i class="fas fa-calendar"></i> <span>Events</span></a></li>
+                <li><a href="groups.html"><i class="fas fa-users"></i> <span>Groups</span></a></li>
+                <li><a href="courses.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+            </ul>
+
+            <div class="shortcuts">
+                <h3>Your Shortcuts</h3>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Tech Innovators</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Blockchain Devs</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Startup Founders</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Digital Nomads</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1><i class="fas fa-users"></i> Your Network</h1>
+            </div>
+
+            <div class="network-grid">
+                <!-- Connection 1 -->
+                <div class="network-card fade-in">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <h3>Michael Chen</h3>
+                    <p>Blockchain Developer</p>
+                    <div class="network-stats">
+                        <div class="network-stat">
+                            <span class="value">4.8</span>
+                            <span class="label">Trust</span>
+                        </div>
+                        <div class="network-stat">
+                            <span class="value">42</span>
+                            <span class="label">Mutual</span>
+                        </div>
+                    </div>
+                    <button class="network-button">Message</button>
+                    <button class="network-button secondary">View Profile</button>
+                </div>
+
+                <!-- Connection 2 -->
+                <div class="network-card fade-in" style="animation-delay: 0.1s;">
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User">
+                    <h3>Sarah Johnson</h3>
+                    <p>University Administrator</p>
+                    <div class="network-stats">
+                        <div class="network-stat">
+                            <span class="value">4.7</span>
+                            <span class="label">Trust</span>
+                        </div>
+                        <div class="network-stat">
+                            <span class="value">28</span>
+                            <span class="label">Mutual</span>
+                        </div>
+                    </div>
+                    <button class="network-button">Message</button>
+                    <button class="network-button secondary">View Profile</button>
+                </div>
+
+                <!-- Connection 3 -->
+                <div class="network-card fade-in" style="animation-delay: 0.2s;">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User">
+                    <h3>David Kim</h3>
+                    <p>HR Director</p>
+                    <div class="network-stats">
+                        <div class="network-stat">
+                            <span class="value">4.9</span>
+                            <span class="label">Trust</span>
+                        </div>
+                        <div class="network-stat">
+                            <span class="value">35</span>
+                            <span class="label">Mutual</span>
+                        </div>
+                    </div>
+                    <button class="network-button">Message</button>
+                    <button class="network-button secondary">View Profile</button>
+                </div>
+
+                <!-- Connection 4 -->
+                <div class="network-card fade-in" style="animation-delay: 0.3s;">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="User">
+                    <h3>Emma Wilson</h3>
+                    <p>University Professor</p>
+                    <div class="network-stats">
+                        <div class="network-stat">
+                            <span class="value">4.6</span>
+                            <span class="label">Trust</span>
+                        </div>
+                        <div class="network-stat">
+                            <span class="value">19</span>
+                            <span class="label">Mutual</span>
+                        </div>
+                    </div>
+                    <button class="network-button">Message</button>
+                    <button class="network-button secondary">View Profile</button>
+                </div>
+
+                <!-- Connection 5 -->
+                <div class="network-card fade-in" style="animation-delay: 0.4s;">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User">
+                    <h3>James Rodriguez</h3>
+                    <p>Startup Founder</p>
+                    <div class="network-stats">
+                        <div class="network-stat">
+                            <span class="value">4.5</span>
+                            <span class="label">Trust</span>
+                        </div>
+                        <div class="network-stat">
+                            <span class="value">31</span>
+                            <span class="label">Mutual</span>
+                        </div>
+                    </div>
+                    <button class="network-button">Message</button>
+                    <button class="network-button secondary">View Profile</button>
+                </div>
+
+                <!-- Connection 6 -->
+                <div class="network-card fade-in" style="animation-delay: 0.5s;">
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="User">
+                    <h3>Sophia Lee</h3>
+                    <p>HR Consultant</p>
+                    <div class="network-stats">
+                        <div class="network-stat">
+                            <span class="value">4.7</span>
+                            <span class="label">Trust</span>
+                        </div>
+                        <div class="network-stat">
+                            <span class="value">22</span>
+                            <span class="label">Mutual</span>
+                        </div>
+                    </div>
+                    <button class="network-button">Message</button>
+                    <button class="network-button secondary">View Profile</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile">
+                <h3>Alexandra Parker</h3>
+                <p>Verified Digital Identity Expert</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">4.9</div>
+                        <div class="stat-label">Trust Score</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1.2K</div>
+                        <div class="stat-label">Connections</div>
+                    </div>
+                </div>
+                <button class="profile-button">View Profile</button>
+                <button class="profile-button secondary">Edit Profile</button>
+            </div>
+
+            <div class="trending-card">
+                <h3><i class="fas fa-user-plus"></i> Suggested Connections</h3>
+                <div class="trending-item">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="User">
+                    <div class="trending-info">
+                        <h4>Robert Taylor</h4>
+                        <p>Education Technology</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User">
+                    <div class="trending-info">
+                        <h4>Jennifer Martinez</h4>
+                        <p>Recruiter</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="User">
+                    <div class="trending-info">
+                        <h4>Thomas Brown</h4>
+                        <p>Blockchain Architect</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trending-card">
+                <h3><i class="fas fa-building"></i> Companies to Follow</h3>
+                <div class="trending-item">
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Company">
+                    <div class="trending-info">
+                        <h4>ChainLink Education</h4>
+                        <p>Blockchain credentials</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Company">
+                    <div class="trending-info">
+                        <h4>TrustID Solutions</h4>
+                        <p>Digital identity</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Company">
+                    <div class="trending-info">
+                        <h4>VerifyMe</h4>
+                        <p>Background checks</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    
+    <script>
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.querySelector('ul').classList.toggle('active');
+        });
+        
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Update icon
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'dark') {
+                const icon = themeToggle.querySelector('i');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+        
+        // User dropdown
+        const userAvatar = document.getElementById('userAvatar');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        userAvatar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Close dropdown when clicking elsewhere
+        document.addEventListener('click', () => {
+            dropdownMenu.style.display = 'none';
+        });
+        // Trending sidebar toggle for mobile
+const mobileTrendingBtn = document.getElementById('mobileTrendingBtn');
+const rightSidebar = document.querySelector('.right-sidebar');
+
+mobileTrendingBtn.addEventListener('click', () => {
+  rightSidebar.classList.toggle('active');
+  
+  // Close if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!rightSidebar.contains(e.target) && e.target !== mobileTrendingBtn) {
+      rightSidebar.classList.remove('active');
+    }
+  }, { once: true });
+});
+
+// Close trending sidebar when clicking on a link inside it
+rightSidebar.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    rightSidebar.classList.remove('active');
+  }
+});
+    
+    </script>
+</body>
+</html>

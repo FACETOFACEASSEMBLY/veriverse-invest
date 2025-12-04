@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs | Veriverse</title>
+    <link rel="icon" href="../assets/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+  <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="../index.html/" class="logo">
+                <img src="../assets/logo.jpg" alt="Veriverse Logo" class="profile-image">
+                <span>Veriverse</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="feed.html/" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="notification.html/"><i class="fas fa-bell"></i> <span>Notification</span></a></li>
+                    <li><a href="network.html/"><i class="fas fa-users"></i> <span>Network</span></a></li>
+                                    <li><a href="message.html/"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+<li><a href="jobs.html/"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                    
+                    <li><a href="verification.html/"><i class="fas fa-shield-alt"></i> <span>Verification</span></a></li>
+                    
+                  
+                        <button class="theme-toggle btn-icon" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="profile-image" id="userAvatar">
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="profile.html/"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="settings.html/"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="index.html/"><i class="fas fa-question-circle"></i> Help</a>
+                            <a href="../index.html/"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main App Content -->
+    <div class="container app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="feed.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+                <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                <li><a href="notification.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                <li><a href="jobs.html" class="active"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                <li><a href="events.html"><i class="fas fa-calendar"></i> <span>Events</span></a></li>
+                <li><a href="groups.html"><i class="fas fa-users"></i> <span>Groups</span></a></li>
+                <li><a href="courses.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+            </ul>
+
+            <div class="shortcuts">
+                <h3>Your Shortcuts</h3>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Tech Innovators</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Blockchain Devs</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Startup Founders</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1><i class="fas fa-briefcase"></i> Job Opportunities</h1>
+                <p class="text-muted">Browse and apply to verified job listings in the Veriverse network</p>
+            </div>
+            
+            <div class="job-filters">
+                <select class="input-field">
+                    <option>All Job Types</option>
+                    <option>Full-time</option>
+                    <option>Part-time</option>
+                    <option>Contract</option>
+                    <option>Internship</option>
+                </select>
+                <select class="input-field">
+                    <option>All Locations</option>
+                    <option>Remote</option>
+                    <option>United States</option>
+                    <option>Europe</option>
+                    <option>Asia</option>
+                </select>
+                <select class="input-field">
+                    <option>All Industries</option>
+                    <option>Blockchain</option>
+                    <option>Finance</option>
+                    <option>Education</option>
+                    <option>Technology</option>
+                </select>
+                <button class="btn btn-primary">Filter Jobs</button>
+            </div>
+            
+            <div class="jobs-grid">
+                <!-- Job 1 -->
+                <div class="card job-card" style="animation-delay: 0.1s;">
+                    <img src="https://logo.clearbit.com/consensys.net" alt="ConsenSys" class="job-logo">
+                    <h3 class="job-title">Blockchain Developer</h3>
+                    <div class="job-company">ConsenSys</div>
+                    <div class="job-meta">
+                        <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                        <span class="job-meta-item"><i class="fas fa-clock"></i> Full-time</span>
+                        <span class="job-meta-item"><i class="fas fa-dollar-sign"></i> $120k - $180k</span>
+                        <span class="job-meta-item"><i class="fas fa-star"></i> Requires Verification</span>
+                    </div>
+                    <p class="job-description">
+                        We're looking for an experienced blockchain developer to work on Ethereum-based projects. 
+                        You'll be building smart contracts, dApps, and contributing to open source projects. 
+                        Solidity experience required.
+                    </p>
+                    <div class="job-actions">
+                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-secondary">View Details</button>
+                        <button class="job-save"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Job 2 -->
+                <div class="card job-card" style="animation-delay: 0.2s;">
+                    <img src="https://logo.clearbit.com/coinbase.com" alt="Coinbase" class="job-logo">
+                    <h3 class="job-title">Security Engineer</h3>
+                    <div class="job-company">Coinbase</div>
+                    <div class="job-meta">
+                        <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
+                        <span class="job-meta-item"><i class="fas fa-clock"></i> Full-time</span>
+                        <span class="job-meta-item"><i class="fas fa-dollar-sign"></i> $150k - $220k</span>
+                        <span class="job-meta-item"><i class="fas fa-star"></i> Requires Verification</span>
+                    </div>
+                    <p class="job-description">
+                        Join our security team to protect digital assets for over 70 million users. 
+                        You'll conduct security reviews, implement best practices, and respond to incidents. 
+                        Experience with cryptography and blockchain security preferred.
+                    </p>
+                    <div class="job-actions">
+                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-secondary">View Details</button>
+                        <button class="job-save"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Job 3 -->
+                <div class="card job-card" style="animation-delay: 0.3s;">
+                    <img src="https://logo.clearbit.com/chain.link" alt="Chainlink" class="job-logo">
+                    <h3 class="job-title">Product Manager</h3>
+                    <div class="job-company">Chainlink Labs</div>
+                    <div class="job-meta">
+                        <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                        <span class="job-meta-item"><i class="fas fa-clock"></i> Full-time</span>
+                        <span class="job-meta-item"><i class="fas fa-dollar-sign"></i> $130k - $190k</span>
+                        <span class="job-meta-item"><i class="fas fa-star"></i> Requires Verification</span>
+                    </div>
+                    <p class="job-description">
+                        Lead product development for oracle services that secure billions in value. 
+                        Work with engineering, design, and business teams to deliver innovative solutions. 
+                        Blockchain experience not required but a plus.
+                    </p>
+                    <div class="job-actions">
+                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-secondary">View Details</button>
+                        <button class="job-save saved"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="card job-card" style="animation-delay: 0.4s;">
+                    <img src="https://logo.clearbit.com/ethereum.org" alt="Ethereum" class="job-logo">
+                    <h3 class="job-title">Smart Contract Engineer</h3>
+                    <div class="job-company">Ethereum Foundation</div>
+                    <div class="job-meta">
+                        <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                        <span class="job-meta-item"><i class="fas fa-clock"></i> Contract</span>
+                        <span class="job-meta-item"><i class="fas fa-dollar-sign"></i> $100 - $150/hr</span>
+                        <span class="job-meta-item"><i class="fas fa-star"></i> Requires Verification</span>
+                    </div>
+                    <p class="job-description">
+                        Contribute to core Ethereum protocol development and smart contract standards. 
+                        Deep experience with Solidity, EVM, and blockchain security required. 
+                        Open source contributions highly valued.
+                    </p>
+                    <div class="job-actions">
+                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-secondary">View Details</button>
+                        <button class="job-save"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 5 -->
+                <div class="card job-card" style="animation-delay: 0.5s;">
+                    <img src="https://logo.clearbit.com/polygon.technology" alt="Polygon" class="job-logo">
+                    <h3 class="job-title">DevOps Engineer</h3>
+                    <div class="job-company">Polygon</div>
+                    <div class="job-meta">
+                        <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                        <span class="job-meta-item"><i class="fas fa-clock"></i> Full-time</span>
+                        <span class="job-meta-item"><i class="fas fa-dollar-sign"></i> $140k - $200k</span>
+                        <span class="job-meta-item"><i class="fas fa-star"></i> Requires Verification</span>
+                    </div>
+                    <p class="job-description">
+                        Build and maintain infrastructure for one of the most used blockchain networks. 
+                        Experience with Kubernetes, Terraform, and blockchain nodes required. 
+                        Contribute to scaling solutions for millions of users.
+                    </p>
+                    <div class="job-actions">
+                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-secondary">View Details</button>
+                        <button class="job-save"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job 6 -->
+                <div class="card job-card" style="animation-delay: 0.6s;">
+                    <img src="https://logo.clearbit.com/aave.com" alt="Aave" class="job-logo">
+                    <h3 class="job-title">DeFi Product Designer</h3>
+                    <div class="job-company">Aave</div>
+                    <div class="job-meta">
+                        <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> London, UK</span>
+                        <span class="job-meta-item"><i class="fas fa-clock"></i> Full-time</span>
+                        <span class="job-meta-item"><i class="fas fa-dollar-sign"></i> $110k - $160k</span>
+                        <span class="job-meta-item"><i class="fas fa-star"></i> Requires Verification</span>
+                    </div>
+                    <p class="job-description">
+                        Design intuitive interfaces for decentralized finance applications. 
+                        Strong UX/UI skills required with portfolio showcasing complex financial interfaces. 
+                        Understanding of DeFi protocols and blockchain UX patterns preferred.
+                    </p>
+                    <div class="job-actions">
+                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-secondary">View Details</button>
+                        <button class="job-save"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile">
+                <h3>Alexandra Parker</h3>
+                <p>Verified Digital Identity Expert</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">4.9</div>
+                        <div class="stat-label">Trust Score</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1.2K</div>
+                        <div class="stat-label">Connections</div>
+                    </div>
+                </div>
+                <button class="profile-button">View Profile</button>
+                <button class="profile-button secondary">Edit Profile</button>
+            </div>
+
+            <div class="trending-card">
+                <h3><i class="fas fa-building"></i> Hiring Now</h3>
+                <div class="trending-item">
+                    <img src="https://logo.clearbit.com/uniswap.org" alt="Uniswap">
+                    <div class="trending-info">
+                        <h4>Uniswap Labs</h4>
+                        <p>5 open positions</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://logo.clearbit.com/opensea.io" alt="OpenSea">
+                    <div class="trending-info">
+                        <h4>OpenSea</h4>
+                        <p>3 open positions</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="https://logo.clearbit.com/metamask.io" alt="MetaMask">
+                    <div class="trending-info">
+                        <h4>MetaMask</h4>
+                        <p>7 open positions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trending-card">
+                <h3><i class="fas fa-fire"></i> Trending Skills</h3>
+                <div class="skill-tag">Solidity</div>
+                <div class="skill-tag">Rust</div>
+                <div class="skill-tag">ZK Proofs</div>
+                <div class="skill-tag">DeFi</div>
+                <div class="skill-tag">NFTs</div>
+                <div class="skill-tag">DAO Governance</div>
+            </div>
+        </aside>
+    </div>
+   
+    <script>
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.querySelector('ul').classList.toggle('active');
+        });
+        
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Update icon
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'dark') {
+                const icon = themeToggle.querySelector('i');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+        
+        // User dropdown
+        const userAvatar = document.getElementById('userAvatar');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        userAvatar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Close dropdown when clicking elsewhere
+        document.addEventListener('click', () => {
+            dropdownMenu.style.display = 'none';
+        });
+        // Trending sidebar toggle for mobile
+const mobileTrendingBtn = document.getElementById('mobileTrendingBtn');
+const rightSidebar = document.querySelector('.right-sidebar');
+
+mobileTrendingBtn.addEventListener('click', () => {
+  rightSidebar.classList.toggle('active');
+  
+  // Close if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!rightSidebar.contains(e.target) && e.target !== mobileTrendingBtn) {
+      rightSidebar.classList.remove('active');
+    }
+  }, { once: true });
+});
+
+// Close trending sidebar when clicking on a link inside it
+rightSidebar.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    rightSidebar.classList.remove('active');
+  }
+});
+    
+    </script>
+</body>
+</html>

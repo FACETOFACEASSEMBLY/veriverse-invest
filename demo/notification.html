@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | Veriverse</title>
+    <link rel="icon" href="../assets/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="../index.html/" class="logo">
+                <img src="../assets/logo.jpg" alt="Veriverse Logo" class="profile-image">
+                <span>Veriverse</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="feed.html/" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="notification.html/"><i class="fas fa-bell"></i> <span>Notification</span></a></li>
+                    <li><a href="network.html/"><i class="fas fa-users"></i> <span>Network</span></a></li>
+                                    <li><a href="message.html/"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+<li><a href="jobs.html/"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                    
+                    <li><a href="verification.html/"><i class="fas fa-shield-alt"></i> <span>Verification</span></a></li>
+                    
+                  
+                        <button class="theme-toggle btn-icon" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="profile-image" id="userAvatar">
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="profile.html/"><i class="fas fa-user"></i> My Profile</a>
+
+                            <a href="index.html/"><i class="fas fa-question-circle"></i> Help</a>
+                            <a href="../index.html/"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main App Content -->
+    <div class="container app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="feed.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+                <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                <li><a href="notification.html" class="active"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i> <span>Jobs</span></a></li>
+                <li><a href="events.html"><i class="fas fa-calendar"></i> <span>Events</span></a></li>
+                <li><a href="groups.html"><i class="fas fa-users"></i> <span>Groups</span></a></li>
+                <li><a href="courses.html"><i class="fas fa-graduation-cap"></i> <span>Courses</span></a></li>
+            </ul>
+
+            <div class="shortcuts">
+                <h3>Your Shortcuts</h3>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Tech Innovators</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Blockchain Devs</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Startup Founders</span>
+                </div>
+                <div class="shortcut-item">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="User" class="shortcut-avatar">
+                    <span class="shortcut-name">Digital Nomads</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1><i class="fas fa-bell"></i> Notifications</h1>
+                <button class="mark-all-read">Mark all as read</button>
+            </div>
+
+            <div class="notifications-list">
+                <!-- Notification 1 -->
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p><strong>Michael Chen</strong> and <strong>3 others</strong> have endorsed your skill in Blockchain Technology</p>
+                        <div class="notification-actions">
+                            <button class="notification-button">Thank</button>
+                            <button class="notification-button secondary">View</button>
+                        </div>
+                        <div class="notification-time">2 hours ago</div>
+                    </div>
+                </div>
+
+                <!-- Notification 2 -->
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p><strong>ChainLink Education</strong> has posted a new job that matches your profile: Senior Blockchain Developer</p>
+                        <div class="notification-actions">
+                            <button class="notification-button primary">Apply</button>
+                            <button class="notification-button secondary">View</button>
+                        </div>
+                        <div class="notification-time">5 hours ago</div>
+                    </div>
+                </div>
+
+                <!-- Notification 3 -->
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>Reminder: You have an upcoming event <strong>Web3 Identity Summit</strong> starting in 1 hour</p>
+                        <div class="notification-actions">
+                            <button class="notification-button primary">Join</button>
+                            <button class="notification-button secondary">Details</button>
+                        </div>
+                        <div class="notification-time">Yesterday</div>
+                    </div>
+                </div>
+
+                <!-- Notification 4 -->
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p><strong>Sarah Johnson</strong> has sent you a tip of 25 VRI for your helpful advice</p>
+                        <div class="notification-actions">
+                            <button class="notification-button primary">Accept</button>
+                            <button class="notification-button secondary">Thank</button>
+                        </div>
+                        <div class="notification-time">Mar 15</div>
+                    </div>
+                </div>
+
+                <!-- Notification 5 -->
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p><strong>David Kim</strong> has accepted your connection request</p>
+                        <div class="notification-actions">
+                            <button class="notification-button">Message</button>
+                            <button class="notification-button secondary">View Profile</button>
+                        </div>
+                        <div class="notification-time">Mar 14</div>
+                    </div>
+                </div>
+
+                <!-- Notification 6 -->
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>Your identity verification has been completed and your Trust Score has increased to <strong>4.9</strong></p>
+                        <div class="notification-actions">
+                            <button class="notification-button">View Profile</button>
+                        </div>
+                        <div class="notification-time">Mar 12</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile">
+                <h3>Alexandra Parker</h3>
+                <p>Verified Digital Identity Expert</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">4.9</div>
+                        <div class="stat-label">Trust Score</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1.2K</div>
+                        <div class="stat-label">Connections</div>
+                    </div>
+                </div>
+                <button class="profile-button">View Profile</button>
+                <button class="profile-button secondary">Edit Profile</button>
+            </div>
+
+            <div class="trending-card">
+                <h3><i class="fas fa-sliders-h"></i> Notification Settings</h3>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>New Connections</h4>
+                        <p>When someone connects with you</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Endorsements</h4>
+                        <p>When someone endorses your skills</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Job Matches</h4>
+                        <p>When new jobs match your profile</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Event Reminders</h4>
+                        <p>Upcoming events you're attending</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Tips Received</h4>
+                        <p>When someone sends you a tip</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+    <style>
+    
+
+
+        .status {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 500;
+        }
+        .status.completed {
+            background: rgba(var(--success), 0.1);
+            color: var(--success);
+        }
+        
+        @media (max-width: 1024px) {
+            .right-sidebar {
+                display: none;
+            }
+            .transfer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        .page-header {
+            display: flex;
+            margin-top: 40px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .mark-all-read {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mark-all-read:hover {
+            opacity: 0.8;
+        }
+        
+        .notifications-list {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        
+        .notification-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .notification-item.unread {
+            background-color: rgba(46, 204, 113, 0.05);
+        }
+        
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+        
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-content p {
+            margin-bottom: 10px;
+        }
+        
+        .notification-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .notification-button {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .notification-button.primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .notification-button.secondary {
+            background-color: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        
+        .notification-button:hover {
+            opacity: 0.9;
+        }
+        
+        .notification-time {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+        
+        .setting-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+        
+        .setting-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--border);
+            transition: .4s;
+            border-radius: 24px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: var(--primary);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+    
+    <script>
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.querySelector('ul').classList.toggle('active');
+        });
+        
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Update icon
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'dark') {
+                const icon = themeToggle.querySelector('i');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+        
+        // User dropdown
+        const userAvatar = document.getElementById('userAvatar');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        userAvatar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Close dropdown when clicking elsewhere
+        document.addEventListener('click', () => {
+            dropdownMenu.style.display = 'none';
+        });
+        // Trending sidebar toggle for mobile
+const mobileTrendingBtn = document.getElementById('mobileTrendingBtn');
+const rightSidebar = document.querySelector('.right-sidebar');
+
+mobileTrendingBtn.addEventListener('click', () => {
+  rightSidebar.classList.toggle('active');
+  
+  // Close if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!rightSidebar.contains(e.target) && e.target !== mobileTrendingBtn) {
+      rightSidebar.classList.remove('active');
+    }
+  }, { once: true });
+});
+
+// Close trending sidebar when clicking on a link inside it
+rightSidebar.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    rightSidebar.classList.remove('active');
+  }
+});
+    
+    </script>
+</body>
+</html>
